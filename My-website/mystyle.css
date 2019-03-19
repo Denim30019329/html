@@ -1,32 +1,35 @@
+#page_wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 body {
-  background-image: url(Images/Gray-plain-website-background.jpg);
-  background-attachment: fixed;
-  background-position: center:;
-  background-attachment: fixed;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+  margin-bottom: 60px;
 }
 
-li {
-  float: left;
+header {
+    background-color: #ccc;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav {
+    height: 48px;
 }
 
-li a:hover {
-  background-color: #111;
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+nav li a {
+    font-family: cursive;
+    color: #ff1e4b;
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+
+nav li a:hover {
+    color: #dd5771;
 }
