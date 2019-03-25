@@ -3,59 +3,108 @@
   
   <style>
 body {
-  background-position:  center center;
-  background-attachment: fixed;
-  background-color: #eff0f0;
+background-position: center center;
+background-attachment: fixed;
+background-color: #9cb694;
 }
 .container {
-  overflow: hidden;
-  background-color: #333333;
-  font-family: Arial;
-  margin-right: 5%;
-  margin-left: 5%;
+margin: 1px 5%;
+overflow: hidden;
+font-family: "Courier New",Courier,monospace;
+background-color: #333333;
 }
 .container a {
-  padding: 14px 16px;
-  float: left;
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+text-decoration: none;
+font-family: "Courier New",Courier,monospace;
+clear: none;
+height: 100%;
+width: 14.2%;
+padding-top: 12px;
+padding-bottom: 12px;
 }
 .container a:hover {
-  background-color: #373837;
+background-color: #7c7c7c;
 }
 .header {
-  border-style: solid;
-  border-width: 3px;
-  position: relative;
-  margin-left: 5%;
-  font-size: 34px;
-  text-align: center;
-  margin-right: 5%;
-  background-color: #b7cdb2;
+border-style: solid;
+border-width: 7px;
+position: relative;
+margin-left: 5%;
+font-size: 34px;
+text-align: center;
+margin-right: 5%;
+background-color: #d7d8d7;
 }
 .p1 {
-  border-style: double;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2%;
-  background-color: #e6e4e6;
-  font-size: 14pt;
+border-style: double;
+border-width: 5px;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 2%;
+background-color: #e6e4e6;
+font-size: 14pt;
 }
 .footer {
-  border-style: double;
-  margin-right: 7.5%;
-  margin-left: 7.5%;
-  position: static;
-  margin-top: 2%;
-  background-color: #e6e4e6;
+border-style: double;
+margin-right: 7.5%;
+margin-left: 7.5%;
+position: static;
+margin-top: 2%;
+background-color: #e6e4e6;
+}
+table
+
+{   
+
+    border-collapse: collapse;
+
+    border: 2px black solid;
+
+    font: 13px sans-serif;
+
+    width: 50%; 
+
+    margin-left: auto;
+
+    margin-right:auto;
+
+    color: #101080;
+
+    background-color: rgb(63, 201, 169);                             
+
 }
 
+ 
+
+td
+
+{
+
+    border: 1px black solid;
+
+    padding: 5px;
+
+    height:20px;
+
+}
+
+    
+
+tr
+
+{
+
+    text-align:center;
+
+    padding: 5px;
+
+}
   </style>
-  <title>page2</title>
+  <title>Table - page 2</title>
 
   
 </head><body>
@@ -63,38 +112,57 @@ body {
 <h2>New Zealand Travel</h2>
 </div>
 
+
 <div class="container">
 <a href="index.html">Home</a>
-<a href="page1.html">Gallery</a> <a href="page2.html">page2</a> <a href="page3.html">page3</a> <a href="page4.html">page4</a> <a href="page5.html">page5</a> <a href="page6.html">page6</a>
+<a href="page1.html">Explore</a> <a href="page2.html">Activities</a> <a href="page3.html">Videos</a> <a href="page4.html">Gallery</a> <a href="page5.html">World Travel</a> <a href="page6.html">Reference</a>
 </div>
+<div class="p1">
+<br>
+<br>
+<br>
+<button id="theButton" onclick="displayAsTable()">OPEN_FILE</button>
+<script src="assets/d3.v3.min.js"></script>
+<div>
+<script id="JavaTable" type="text/javascript">
 
-<div class="p1"><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+function displayAsTable()
+
+{
+
+d3.text("assets/test.csv", function(data)
+
+{
+
+var parsedCSV = d3.csv.parseRows(data);
+
+var container = d3.select("div")
+
+.append("table")
+
+.selectAll("tr")
+
+.data(parsedCSV).enter()
+
+.append("tr")
+
+.selectAll("td")
+
+.data(function(d) { return d; }).enter()
+
+.append("td")
+
+.text(function(d) { return d; });
+
+});
+
+var buttonDiv = document.getElementById("theButton");
+
+buttonDiv.style.display = "none";
+
+}
+
+</script></div>
 </div>
 
 <div class="footer">

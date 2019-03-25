@@ -1,5 +1,242 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>page4</title></head><body>
-  <br>
+<html><head>
+  
+  <style>
+body {
+  background-position:  center center;
+  background-attachment: fixed;
+  background-color: #9cb694;
+}
+.container {
+  margin: 1px 5%;
+  overflow: hidden;
+  font-family: "Courier New",Courier,monospace;
+  background-color: #333333;
+}
+.container a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Courier New",Courier,monospace;
+  clear: none;
+  height: 100%;
+  width: 14.2%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.container a:hover {
+  background-color: #7c7c7c;
+}
+.header {
+  border-style: solid;
+  border-width: 7px;
+  position: relative;
+  margin-left: 5%;
+  font-size: 34px;
+  text-align: center;
+  margin-right: 5%;
+  background-color: #d7d8d7;
+}
+.p1 {
+  border-style: double;
+  border-width: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  background-color: #e6e4e6;
+  font-size: 14pt;
+}
+.footer {
+  border-style: double;
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+  position: static;
+  margin-top: 2%;
+  background-color: #e6e4e6;
+}
+.row > .column {
+  padding: 0 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 23.9%;
+}
+.modal {
+  overflow: auto;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.modal-content {
+  margin: auto;
+  padding: 0;
+  position: relative;
+  background-color: #fefefe;
+  width: 90%;
+  max-width: 1200px;
+}
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: #999999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  padding: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.next {
+  right: 0;
+}
+.prev:hover, .next:hover {
+}
+.numbertext {
+  padding: 8px 12px;
+  color: #f2f2f2;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+.caption-container {
+  padding: 2px 16px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+img.demo {
+  opacity: 0.6;
+}
+.active, .demo:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+}
+.hover-shadow:hover {
+}
 
+  </style>
+  <title>Gallery - Page 4</title>
+
+  
+</head><body>
+<div class="header">
+<h2>New Zealand Travel</h2>
+</div>
+
+<div class="container">
+<a href="index.html">Home</a>
+<a href="page1.html">Explore</a> <a href="page2.html">Activities</a> <a href="page3.html">Videos</a> <a href="page4.html">Gallery</a> <a href="page5.html">World Travel</a> <a href="page6.html">Reference</a>
+</div>
+
+<div class="p1"><br>
+<!-- Images used to open the lightbox -->
+<div class="row">
+<div class="column"> <img style="width: 100%;" src="Images/test.png" onclick="openModal();currentSlide(1)" class="hover-shadow"> </div>
+<div class="column"> <img style="width: 100%;" src="Images/test.png" onclick="openModal();currentSlide(2)" class="hover-shadow"> </div>
+<div class="column"> <img style="width: 100%;" src="Images/test.png" onclick="openModal();currentSlide(3)" class="hover-shadow"> </div>
+<div class="column"> <img style="width: 100%;" src="Images/test.png" onclick="openModal();currentSlide(4)" class="hover-shadow"> </div>
+</div>
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal"> <span class="close cursor" onclick="closeModal()">×</span>
+<div class="modal-content">
+<div class="mySlides">
+<div class="numbertext">1 / 4</div>
+<img src="Images/test.png" style="width: 100%;"> </div>
+<div class="mySlides">
+<div class="numbertext">2 / 4</div>
+<img src="Images/test.png" style="width: 100%;"> </div>
+<div class="mySlides">
+<div class="numbertext">3 / 4</div>
+<img src="Images/test.png" style="width: 100%;"> </div>
+<div class="mySlides">
+<div class="numbertext">4 / 4</div>
+<img src="Images/test.png" style="width: 100%;"> </div>
+<!-- Next/previous controls --> <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!-- Caption text -->
+<div class="caption-container"> </div>
+<!-- Thumbnail image controls -->
+<div class="column"> <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature"> </div>
+<div class="column"> <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow"> </div>
+<div class="column"> <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains"> </div>
+<div class="column"> <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights"> </div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+Footer<br>
+</div>
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body></html>

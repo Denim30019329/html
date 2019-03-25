@@ -1,35 +1,57 @@
-#page_wrapper {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
+*|body {
+  background-position:  center center;
+  background-attachment: fixed;
+  background-color: #9cb694;
 }
-
-body {
-  margin-bottom: 60px;
+*|.container {
+  margin: 1px 5%;
+  overflow: hidden;
+  font-family: "Courier New",Courier,monospace;
+  background-color: #333333;
 }
-
-header {
-    background-color: #ccc;
+*|.container *|a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Courier New",Courier,monospace;
+  clear: none;
+  height: 100%;
+  width: 14.2%;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-
-nav {
-    height: 48px;
+*|.container *|a:hover {
+  background-color: #7c7c7c;
 }
-
-nav ul {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+*|.header {
+  border-style: solid;
+  border-width: 7px;
+  position: relative;
+  margin-left: 5%;
+  font-size: 34px;
+  text-align: center;
+  margin-right: 5%;
+  background-color: #d7d8d7;
 }
-nav li a {
-    font-family: cursive;
-    color: #ff1e4b;
-    font-size: 16px;
-    text-decoration: none;
-    
+*|.p1 {
+  border-style: double;
+  border-width: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  background-color: #e6e4e6;
+  font-size: 14pt;
 }
-
-nav li a:hover {
-    color: #dd5771;
+*|.footer {
+  border-style: double;
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+  position: static;
+  margin-top: 2%;
+  background-color: #e6e4e6;
+}
+*|.head1 {
+  text-align: center;
 }
